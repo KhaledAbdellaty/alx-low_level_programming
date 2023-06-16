@@ -13,13 +13,12 @@ int main(void)
 		putchar(zero);
 		zero++;
 	}
+	zero = 'a';
 
-	char a = 'a';
-
-	while (a <= 'f')
+	while (zero <= 'f')
 	{
-		putchar(a);
-		a++;
+		putchar(zero);
+		zero++;
 	}
 
 	putchar('\n');
