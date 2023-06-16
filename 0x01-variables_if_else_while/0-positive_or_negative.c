@@ -4,8 +4,8 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/*
- * main - Entry point
+/**
+ * main - main block
  * Description: get a random number and declare it to n
  * print the number in n is positive or negative
  * Return: 0
