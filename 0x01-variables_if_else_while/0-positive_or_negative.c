@@ -6,7 +6,7 @@
 
 /*
  * main func - is a entry point for our programe - naim block
- * get a random number and declare it to n
+ * Description: get a random number and declare it to n
  * print the number in n is positive or negative
  */
 
