@@ -5,7 +5,7 @@
 /* more headers goes there */
 
 /*
- * main func - is a entry point for our programe - naim block
+ * main - main block is a entry point for our programe 
  * Description: get a random number and declare it to n
  * print the number in n is positive or negative
  */
