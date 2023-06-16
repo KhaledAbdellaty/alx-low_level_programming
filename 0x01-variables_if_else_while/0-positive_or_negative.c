@@ -5,7 +5,7 @@
 /* more headers goes there */
 
 /*
- * main - main block
+ * main - Entry point
  * Description: get a random number and declare it to n
  * print the number in n is positive or negative
  * Return: 0
