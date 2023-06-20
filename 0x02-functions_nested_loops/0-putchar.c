@@ -12,8 +12,8 @@ int main(void)
 
 	while (x < 8)
 	{
-		++x;
 		_putchar(str[x]);
+		x++;
 	}
 	_putchar('\n');
 
