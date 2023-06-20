@@ -5,10 +5,10 @@
  * @y: this is the second argument
  * Return: sum of x and y
  */
-int add(int x,int y)
+int add(int x, int y)
 {
 	int sum;
 
-	sum = x+y;
+	sum = x + y;
 	return (sum);
 }
