@@ -7,7 +7,7 @@ void print_diagonal(int n)
 {
 	if (n > 0)
 	{
-		int a,b;
+		int a, b;
 
 		for (a = 0; a < n; a++)
 		{
@@ -16,7 +16,7 @@ void print_diagonal(int n)
 				if (a > b)
 					_putchar(' ');
 				else if (b == a)
-					_putcha('\\');
+					_putchar('\\');
 			}
 			_putchar('\n');
 		}
