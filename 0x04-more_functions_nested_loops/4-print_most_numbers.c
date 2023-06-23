@@ -6,6 +6,7 @@
 void print_most_numbers(void)
 {
 	int zero = 0;
+
 	while (zero < 10)
 	{
 		if (zero != 2 && zero != 4)
