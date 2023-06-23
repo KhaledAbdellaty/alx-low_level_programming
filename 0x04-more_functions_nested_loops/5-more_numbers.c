@@ -11,8 +11,11 @@ void more_numbers(void)
 	for (column = 0; column < 10; column++)
 	{
 		for (row = 0; row < 15; row++)
-			_putchar(row + '0');
+		{
+			if (row >= 10)
+				_putchar(row / 10 + '0');
+			_putchar(row % 10 + '0');
+		}
 		_putchar('\n');
 	}
-	_putchar('\n');
 }
