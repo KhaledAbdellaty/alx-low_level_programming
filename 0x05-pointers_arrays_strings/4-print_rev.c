@@ -13,7 +13,7 @@ void print_env(char *s)
 		length++;
 	}
 
-	for (last_index = (length - 1); last_index >= 0; last_index--;)
+	for (last_index = (length - 1); last_index >= 0; last_index--)
 	{
 		_putchar(s[last_index]);
 	}
