@@ -14,8 +14,9 @@ void rev_string(char *s)
 		length++;
 	}
 
-	int last_index = length - 1;
+	int last_index;
 
+	last_index = length - 1;
 	for (i = 0; i < length / 2; i++)
 	{
 		tmp = s[i];
