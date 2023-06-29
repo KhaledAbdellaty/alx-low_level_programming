@@ -11,6 +11,18 @@ int _strcmp(char *s1, char *s2)
 {
 	unsigned int i;
 
+	while (*s1 == *s2)
+	{
+		if (*s1 != '\0')
+		{
+			s1++;
+			s2++;
+		}
+		else
+		{
+			return (0);
+		}
+	}
 	i = *s1 - *s2;
 
 	return (i);
