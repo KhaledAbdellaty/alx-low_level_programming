@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _strpbrk -  a function that searches
+ * _strpbrk - a function that searches
  * a string for any of a set of bytes.
  * @s: the first string
  * @accept: searching string list
- * Retuen: Returns a pointer to the byte in s,
+ * Return: Returns a pointer to the byte in s,
  */
 char *_strpbrk(char *s, char *accept)
 {
