@@ -9,3 +9,4 @@ void print_chessboard(char (*a)[8]);
 void _putchar(char);
 void print_diagsums(int *a, int size);
 unsigned int _strspn(char *s, char *accept);
+void set_string(char **s, char *to);
