@@ -16,7 +16,7 @@ int get_strlen(char *s)
  * is a palindrome
  * @s: is a string
  * @i: the index of the array
- * @s: is a length of the string
+ * @len: is a length of the string
  * Return: returns 1, or 0
  */
 int _is_palindrome(char *s, int i, int len)
