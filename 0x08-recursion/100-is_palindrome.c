@@ -37,8 +37,8 @@ int is_palindrome(char *s)
 {
 	if (!*s)
 		return (1);
+	int len;
 
-	int len = get_strlen(s);
-
+	len = get_strlen(s);
 	return (_is_palindrome(s, 0, len));
 }
