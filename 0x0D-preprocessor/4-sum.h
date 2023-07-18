@@ -1,6 +1,6 @@
 #ifndef CHECKER
 #define CHECKER
 
-#define ABS(X) ((X) < (0) ? -(X) : (X))
+#define SUM(x, y) ((x) + (y))
 
 #endif
