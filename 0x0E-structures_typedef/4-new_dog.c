@@ -18,7 +18,6 @@ int _strlen(char *s)
 	return (i);
 }
 
-
 /**
  * new_dog - a function that creates a new dog.
  * @name: the dog name
@@ -50,11 +49,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(dog);
 		return (NULL);
 	}
-	while (i < len_name)
-	{
+	for (i = 0; i < len_name; i++)
 		dog->name[i] = name[i];
-		i++;
-	}
+
 	dog->owner = malloc(len_owner + 1);
 	if (dog->owner == NULL)
 	{
