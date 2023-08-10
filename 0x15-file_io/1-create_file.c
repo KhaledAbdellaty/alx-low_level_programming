@@ -13,7 +13,7 @@ ssize_t _strlen(const char *str)
 	return (_strlen(str + 1) + 1);
 }
 /**
- * creat_file - a function that creates a file.
+ * create_file - a function that creates a file.
  * @filename: the file to create.
  * @text_content: the string to write to the file.
  * Return: reurns 1 on success, -1 on failure.
@@ -32,8 +32,11 @@ int create_file(const char *filename, char *text_content)
 	if (fp == -1)
 		return (fp);
 
-	if (write(fp, text_content, strlen) == -1)
-		return (-1);
+	if (strlen)
+	{
+		if (write(fp, text_content, strlen) == -1)
+			return (-1);
+	}
 
 	return (1);
 }
