@@ -8,8 +8,9 @@
 
 ssize_t _strlen(const char *str)
 {
-	if (!*str)
+	if (!str || !*str)
 		return (0);
+
 	return (_strlen(str + 1) + 1);
 }
 /**
@@ -22,7 +23,7 @@ ssize_t _strlen(const char *str)
 int create_file(const char *filename, char *text_content)
 {
 	int fp;
-	ssize_t strlen = _strlen(text_content), bytes = 0;
+	ssize_t strlen = _strlen(text_content);
 
 	if (!filename)
 		return (-1);
@@ -33,8 +34,10 @@ int create_file(const char *filename, char *text_content)
 		return (fp);
 
 	if (strlen)
-		bytes = write(fp, text_content, strlen);
-
+	{
+		if (write(fp, text_content, strlen) == -1)
+			return (-1);
+	}
 	close(fp);
-	return (strlen == bytes ? 1 : -1);
+	return (1);
 }
