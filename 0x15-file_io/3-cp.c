@@ -29,9 +29,11 @@ int main(int ac, char *av[])
 	if (fd_to == -1)
 		dprintf(STDERR_FILENO, ERR_WRITE, av[2]), exit(98);
 
-	while ((r = read(fd_from, &buf[0], BUF_SIZE)) > 0)
+	while ((r = read(fd_from, buf, BUF_SIZE)) > 0)
 		if (write(fd_to, buf, r) != r)
 			dprintf(STDERR_FILENO, ERR_WRITE, av[2]), exit(99);
+	if (r == -1)
+		dprintf(STDERR_FILENO, ERR_READ, av[1]), exit(98);
 
 	if (close(fd_from))
 		dprintf(STDERR_FILENO, ERR_CLOSE, fd_from), exit(100);
