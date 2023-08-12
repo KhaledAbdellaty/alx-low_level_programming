@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>
-
+#include <stdio.h>
 
 #ifndef BUF_SIZE
 #define BUF_SIZE 1024
