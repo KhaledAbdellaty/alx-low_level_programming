@@ -24,17 +24,15 @@ int main(int ac, char *av[])
 	if (fd_from == -1)
 		dprintf(STDERR_FILENO, ERR_READ, av[1]), exit(98);
 
-	r = read(fd_from, &buf[0], BUF_SIZE);
-	if (r == -1)
-		dprintf(STDERR_FILENO, ERR_READ, av[1]), exit(98);
-
 	fd_to = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0644);
 
 	if (fd_to == -1)
 		dprintf(STDERR_FILENO, ERR_WRITE, av[2]), exit(98);
 
-	if (write(fd_to, buf, r) != r)
-		dprintf(STDERR_FILENO, ERR_WRITE, av[2]), exit(99);
+	while ((r = read(fd_from, &buf[0], BUF_SIZE)) > 0)
+		if (write(fd_to, buf, r) != r)
+			dprintf(STDERR_FILENO, ERR_WRITE, av[2]), exit(99);
+
 	if (close(fd_from))
 		dprintf(STDERR_FILENO, ERR_CLOSE, fd_from), exit(100);
 
